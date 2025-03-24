@@ -1,21 +1,17 @@
-
 plugins {
-    `java-library`
-    `kotlin`
-    `maven-publish`
+    kotlin("jvm") version "1.9.22"
 }
 
-group = "com.uxo"
+group = "https://github.com/Vladislav-Shesternin"
 version = "1.0.0"
 
 repositories {
     mavenCentral()
-    mavenLocal()
+    maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots/") }
+    maven { url = uri("https://oss.sonatype.org/content/repositories/releases/") }
     maven { url = uri("https://jitpack.io") }
 }
 
-val gdxVersion = "1.12.0"
-
 dependencies {
-    api("com.badlogicgames.gdx:gdx:$gdxVersion")
+    api("com.badlogicgames.gdx:gdx:1.12.0")
 }
