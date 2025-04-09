@@ -8,7 +8,7 @@ class UXOGroup : Group() {
         val s = javaClass.getResource("/shader/defaultVS.glsl")?.readText() ?: throw IllegalStateException("Shader not found")
         return s
     }
-    
+
 }
 
 fun globalFun(): String {
