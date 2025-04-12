@@ -27,7 +27,7 @@ object Gist {
                 val inputStream: InputStream = connection.inputStream
                 val response = inputStream.readBytes().toString(Charsets.UTF_8) // Читаємо відповідь у String
                 inputStream.close()
-                
+
                 val json = JSONObject(response)
                 log(json.toString())
 
